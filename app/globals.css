@@ -797,9 +797,42 @@ main {
   color: var(--gold-light);
 }
 
-@media (max-width: 520px) {
+/* Kompakt cookie-banner på mobil — fylder mindst muligt, så det ikke
+   dækker hovedindholdet eller hero-knappen. */
+@media (max-width: 600px) {
+  .lz-cc {
+    padding: 0.5rem;
+  }
+  .lz-cc__panel {
+    padding: 0.85rem 0.95rem;
+    border-radius: 14px;
+    background: rgba(13, 11, 20, 0.98);
+  }
+  .lz-cc__title {
+    font-size: 0.96rem;
+    margin-bottom: 0.2rem;
+  }
+  .lz-cc__text {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    margin-bottom: 0.7rem;
+  }
+  /* to knapper side om side (ikke tre i fuld bredde) = markant lavere banner */
+  .lz-cc__actions {
+    gap: 0.45rem;
+  }
   .lz-cc__actions .lz-btn {
-    width: 100%;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0.6rem 0.5rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  /* "Tilpas indstillinger" på egen linje under knapperne */
+  .lz-cc__settings-link {
+    flex: 1 0 100%;
+    text-align: center;
+    margin-top: 0.15rem;
   }
 }
 
