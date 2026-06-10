@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Vores vurdering af kasinoer",
   description:
-    "Redaktionel sammenligning af onlinekasinoer med licens fra Spillemyndigheden i Danmark: 888.dk og Betano.dk. 18+.",
+    "Redaktionel sammenligning af onlinekasinoer med licens fra Spillemyndigheden i Danmark: NordicBet.dk og bet365.dk. 18+.",
   alternates: { canonical: "/vurdering" },
 };
 

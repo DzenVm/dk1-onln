@@ -25,7 +25,7 @@ samme struktur og design, oversat indhold, danske myndigheder og betalingsmetode
 | Rute | Indhold |
 | --- | --- |
 | `/` | Forside: hero, fordele, tjekliste, FAQ, vaner |
-| `/vurdering` | Redaktionel vurdering med tilbudskort (888, Betano) |
+| `/vurdering` | Redaktionel vurdering med tilbudskort (NordicBet, bet365) |
 | `/videre/[slug]` | Bro-/mellemside (18+ påmindelse) før udbyderen — `noindex` |
 | `/om-os`, `/kontakt`, `/vilkaar`, `/privatliv`, `/ansvarligt-spil` | Indholds- og juridiske sider |
 
