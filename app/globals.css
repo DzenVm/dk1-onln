@@ -200,14 +200,22 @@ main {
   width: 100%;
 }
 
-/* ---- Hero ---- */
+/* ---- Hero (fuld skærmhøjde på alle enheder) ---- */
 .lz-hero {
-  padding-block: clamp(2.5rem, 8vw, 5rem) clamp(2rem, 5vw, 3.5rem);
+  /* 100svh = den synlige højde på mobil (uden at hoppe når adresselinjen
+     skjules); vh-fallback til ældre browsere. */
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(1.5rem, 4vh, 3rem);
+  /* plads til cookie-banneret i bunden på små skærme */
+  padding-bottom: max(clamp(1.5rem, 4vh, 3rem), env(safe-area-inset-bottom));
 }
 .lz-hero__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(1.5rem, 4vw, 3rem);
+  gap: clamp(1rem, 3vh, 2.5rem);
   align-items: center;
 }
 .lz-hero__copy {
@@ -218,14 +226,14 @@ main {
   max-width: 56ch;
 }
 .lz-hero__cta {
-  margin-top: 2rem;
+  margin-top: clamp(1.2rem, 3vh, 2rem);
   display: flex;
   gap: 0.9rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 .lz-hero__note {
-  margin-top: 1.4rem;
+  margin-top: clamp(0.9rem, 2vh, 1.4rem);
   font-size: 0.92rem;
   color: var(--muted);
 }
@@ -236,9 +244,25 @@ main {
 }
 .lz-hero__media img {
   width: 100%;
-  max-width: 440px;
   height: auto;
+  /* skaleres efter skærmhøjden, så hero + billede altid kan stå på én skærm */
+  max-width: min(440px, 80vw);
+  max-height: 38svh;
+  object-fit: contain;
   filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.55));
+}
+
+/* Meget lave landskabsskærme (telefon på siden): drop fuld højde,
+   så indholdet ikke klemmes. */
+@media (max-height: 480px) {
+  .lz-hero {
+    min-height: auto;
+    padding-block: 2rem;
+  }
+  .lz-hero__media img {
+    max-height: none;
+    max-width: 220px;
+  }
 }
 
 @media (min-width: 900px) {
@@ -258,6 +282,7 @@ main {
   }
   .lz-hero__media img {
     max-width: 480px;
+    max-height: 70svh;
   }
 }
 
@@ -755,5 +780,108 @@ main {
 @media (max-width: 520px) {
   .lz-cc__actions .lz-btn {
     width: 100%;
+  }
+}
+
+/* =========================================================
+   Mobil-finpudsning (adaptivitet / UI-UX)
+   ========================================================= */
+
+/* Lange danske sammensatte ord må aldrig sprænge layoutet. */
+body {
+  overflow-wrap: break-word;
+}
+html,
+body {
+  overflow-x: clip;
+}
+
+@media (max-width: 600px) {
+  /* Eyebrow-chippen skal kunne ombrydes pænt på smalle skærme. */
+  .lz-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.7rem;
+    max-width: 100%;
+    line-height: 1.5;
+  }
+
+  /* Hero-CTA'er i fuld bredde = større tap-mål, ingen skæv ombrydning. */
+  .lz-hero__cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .lz-hero__cta .lz-btn {
+    width: 100%;
+  }
+
+  /* Tjekliste: mindre venstre-indrykning, så teksten får plads. */
+  .lz-check__item {
+    padding: 1rem 1rem 1rem 2.9rem;
+  }
+  .lz-check__item::before {
+    left: 0.9rem;
+    top: 1rem;
+  }
+
+  /* Tilbudskort: lidt strammere indre luft. */
+  .lz-cardx__body {
+    padding: 1.1rem;
+  }
+  .lz-cardx__bar {
+    font-size: 0.78rem;
+  }
+  .lz-cardx__name {
+    font-size: 1.15rem;
+  }
+  /* Score på egen linje under brandet, i stedet for at klemme sig på plads. */
+  .lz-score {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Tabel i kortet: giv værdikolonnen mere plads. */
+  .lz-table th {
+    width: 32%;
+    padding-right: 0.7rem;
+  }
+
+  /* Footer: centreret og luftigt på mobil; links med større tap-mål. */
+  .lz-foot__legal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .lz-foot__links a {
+    padding-block: 0.35rem;
+    display: inline-block;
+  }
+
+  /* FAQ: lidt mindre padding, mere tekstplads. */
+  .lz-faq__item summary {
+    padding: 0.95rem 1rem;
+  }
+  .lz-faq__item p {
+    padding: 0 1rem 1rem;
+  }
+
+  /* Genåbn-knappen for cookies må ikke dække footer-links: mindre og diskret. */
+  .lz-cc-reopen {
+    left: 0.6rem;
+    bottom: 0.6rem;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.78rem;
+  }
+}
+
+/* Meget smalle enheder (<360px): trim typografien en anelse. */
+@media (max-width: 360px) {
+  body {
+    font-size: 16px;
+  }
+  .lz-h1 {
+    font-size: 1.9rem;
+  }
+  .lz-wrap {
+    padding-inline: 0.85rem;
   }
 }
