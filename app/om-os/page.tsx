@@ -48,8 +48,8 @@ export default function OmOsPage() {
 
           <h2>Udgiver</h2>
           <p>
-            {SITE.name} udgives af {SITE.company.legalName}, {SITE.company.address}. KRS{" "}
-            {SITE.company.krs} · NIP {SITE.company.nip} · REGON {SITE.company.regon}.
+            {SITE.name} udgives af {SITE.company.legalName}, {SITE.company.address}. IČO{" "}
+            {SITE.company.ico}.
           </p>
           <p>
             Spørgsmål? Skriv til os på{" "}

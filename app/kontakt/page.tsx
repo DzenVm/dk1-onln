@@ -33,7 +33,7 @@ export default function KontaktPage() {
             <br />
             {SITE.company.address}
             <br />
-            KRS {SITE.company.krs} · NIP {SITE.company.nip} · REGON {SITE.company.regon}
+            IČO {SITE.company.ico}
           </p>
 
           <h2>Vigtigt</h2>

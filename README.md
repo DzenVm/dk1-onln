@@ -50,5 +50,5 @@ npm start        # kør produktionsbuild
 
 1. Importér repoet i Vercel (framework registreres automatisk som Next.js).
 2. Sæt miljøvariablen `NEXT_PUBLIC_SITE_URL` til dit endelige domæne
-   (f.eks. `https://spilnord.dk`) — bruges til canonical-URL'er, sitemap og JSON-LD.
+   (f.eks. `https://marevgam.live`) — bruges til canonical-URL'er, sitemap og JSON-LD.
 3. Deploy. Ingen yderligere konfiguration kræves.
