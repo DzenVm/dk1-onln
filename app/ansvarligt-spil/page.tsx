@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function AnsvarligtSpilPage() {
-  const { regulator, help, selfExclusion } = SITE.authorities;
+  const { regulator, help, selfExclusion, treatment } = SITE.authorities;
   return (
     <section className="lz-sheet lz-sheet--narrow">
       <div className="lz-wrap">
@@ -57,13 +57,22 @@ export default function AnsvarligtSpilPage() {
               <a href={help.url} target="_blank" rel="noopener noreferrer">
                 {help.label}
               </a>{" "}
-              — den nationale, gratis og anonyme hjælpelinje for spilleafhængighed.
+              — Spillemyndighedens nationale, gratis og anonyme hjælpelinje for
+              spilafhængighed. Ring <a href={help.phoneHref}>tlf. {help.phone}</a> (alle
+              hverdage) eller brug chatten på stopspillet.dk.
             </li>
             <li>
               <a href={selfExclusion.url} target="_blank" rel="noopener noreferrer">
                 {selfExclusion.label}
               </a>{" "}
-              — frivillig selvudelukkelse fra spil med dansk licens.
+              — Register Over Frivilligt Udelukkede Spillere; frivillig selvudelukkelse fra
+              alt spil med dansk licens, midlertidigt eller permanent.
+            </li>
+            <li>
+              <a href={treatment.url} target="_blank" rel="noopener noreferrer">
+                {treatment.label}
+              </a>{" "}
+              — gratis og professionel behandling af ludomani for spillere og pårørende.
             </li>
             <li>
               <a href={regulator.url} target="_blank" rel="noopener noreferrer">

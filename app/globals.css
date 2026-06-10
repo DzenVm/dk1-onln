@@ -646,6 +646,17 @@ main {
   color: var(--muted);
   font-weight: 600;
 }
+.lz-foot__rg-text {
+  margin: 0.8rem auto 0;
+  max-width: 72ch;
+  text-align: center;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+.lz-foot__rg-text a {
+  color: var(--text);
+  font-weight: 600;
+}
 .lz-foot__legal {
   margin-top: 1.8rem;
   padding-top: 1.4rem;

@@ -26,11 +26,18 @@ export const SITE = {
     country: "CZ",
     ico: "29079217",
   },
-  // Officielle, danske myndigheds- og hjælpelinjer.
+  // Officielle, danske myndigheds- og hjælpelinjer (kræves i markedsføring
+  // af spil: 18+, StopSpillet og ROFUS — jf. Spillemyndighedens regler).
   authorities: {
     regulator: { label: "Spillemyndigheden", url: "https://www.spillemyndigheden.dk" },
-    help: { label: "StopSpillet", url: "https://www.stopspillet.dk" },
+    help: {
+      label: "StopSpillet",
+      url: "https://www.stopspillet.dk",
+      phone: "70 22 28 25",
+      phoneHref: "tel:+4570222825",
+    },
     selfExclusion: { label: "ROFUS", url: "https://www.rofus.nu" },
+    treatment: { label: "Center for Ludomani", url: "https://ludomani.dk" },
   },
 } as const;
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { SITE, NAV_FOOTER } from "@/lib/site";
 
 export default function SiteFooter() {
-  const { regulator, help } = SITE.authorities;
+  const { regulator, help, selfExclusion, treatment } = SITE.authorities;
   const c = SITE.company;
   return (
     <footer className="lz-foot" aria-label="Sidefod">
@@ -43,7 +43,7 @@ export default function SiteFooter() {
           <p
             className="lz-foot__rg-inner"
             role="group"
-            aria-label="Aldersgrænse og officielle links"
+            aria-label="Aldersgrænse og officielle hjælperessourcer"
           >
             <span className="lz-foot__age" aria-label="Kun for personer over 18 år">
               18+
@@ -75,6 +75,31 @@ export default function SiteFooter() {
               </svg>
               <span>{help.label}</span>
             </a>
+            <span className="lz-foot__sep" aria-hidden="true">
+              |
+            </span>
+            <a href={selfExclusion.url} target="_blank" rel="noopener noreferrer">
+              {selfExclusion.label}
+            </a>
+            <span className="lz-foot__sep" aria-hidden="true">
+              |
+            </span>
+            <a href={treatment.url} target="_blank" rel="noopener noreferrer">
+              {treatment.label}
+            </a>
+          </p>
+          <p className="lz-foot__rg-text">
+            Hjælpelinjen {help.label}:{" "}
+            <a href={help.phoneHref}>tlf. {help.phone}</a> (Spillemyndighedens hjælpelinje
+            mod spilafhængighed) ·{" "}
+            <a href={selfExclusion.url} target="_blank" rel="noopener noreferrer">
+              {selfExclusion.label}
+            </a>{" "}
+            — Register Over Frivilligt Udelukkede Spillere ·{" "}
+            <a href={treatment.url} target="_blank" rel="noopener noreferrer">
+              {treatment.label}
+            </a>{" "}
+            — gratis behandling af ludomani. Spil med omtanke.
           </p>
         </div>
 
