@@ -207,18 +207,23 @@ main {
   min-height: 100vh;
   min-height: 100svh;
   display: flex;
-  align-items: center;
-  padding-block: clamp(1.5rem, 4vh, 3rem);
+  align-items: stretch;
+  padding-block: clamp(1.1rem, 3vh, 3rem);
   /* plads til cookie-banneret i bunden på små skærme */
-  padding-bottom: max(clamp(1.5rem, 4vh, 3rem), env(safe-area-inset-bottom));
+  padding-bottom: max(clamp(1.1rem, 3vh, 3rem), env(safe-area-inset-bottom));
 }
+/* Mobil-first: kolonne, hvor billedet får den RESTERENDE plads og skaleres
+   efter højden, så hero altid passer på én skærm uden at billedet beskæres. */
 .lz-hero__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(1rem, 3vh, 2.5rem);
-  align-items: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.8rem, 2.2vh, 2rem);
+  width: 100%;
+  min-height: 0;
 }
 .lz-hero__copy {
+  flex: 0 0 auto;
   text-align: center;
 }
 .lz-hero .lz-intro {
@@ -226,28 +231,32 @@ main {
   max-width: 56ch;
 }
 .lz-hero__cta {
-  margin-top: clamp(1.2rem, 3vh, 2rem);
+  margin-top: clamp(0.9rem, 2.2vh, 2rem);
   display: flex;
   gap: 0.9rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 .lz-hero__note {
-  margin-top: clamp(0.9rem, 2vh, 1.4rem);
+  margin-top: clamp(0.7rem, 1.6vh, 1.4rem);
   font-size: 0.92rem;
   color: var(--muted);
 }
 .lz-hero__media {
+  /* fylder al resterende lodret plads; billedet skaleres ned i den */
+  flex: 1 1 auto;
+  min-height: 0;
   margin: 0;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 .lz-hero__media img {
-  width: 100%;
+  display: block;
+  width: auto;
   height: auto;
-  /* skaleres efter skærmhøjden, så hero + billede altid kan stå på én skærm */
-  max-width: min(440px, 80vw);
-  max-height: 38svh;
+  max-width: min(440px, 84vw);
+  max-height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.55));
 }
@@ -259,15 +268,25 @@ main {
     min-height: auto;
     padding-block: 2rem;
   }
+  .lz-hero__media {
+    flex: 0 0 auto;
+  }
   .lz-hero__media img {
-    max-height: none;
+    max-height: 50vh;
     max-width: 220px;
   }
 }
 
 @media (min-width: 900px) {
+  .lz-hero {
+    align-items: center;
+  }
   .lz-hero__grid {
+    flex: none;
+    display: grid;
     grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
   }
   .lz-hero__copy {
     text-align: left;
@@ -278,11 +297,12 @@ main {
     justify-content: flex-start;
   }
   .lz-hero__media {
+    flex: none;
     justify-content: flex-end;
   }
   .lz-hero__media img {
     max-width: 480px;
-    max-height: 70svh;
+    max-height: 72svh;
   }
 }
 
