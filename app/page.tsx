@@ -125,25 +125,40 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="lz-sheet lz-hero">
-        <div className="lz-wrap lz-hero__inner">
-          <span className="lz-eyebrow">Lovligt marked · Spillemyndigheden · 2026</span>
-          <h1 className="lz-h1">Onlinekasinoer i Danmark</h1>
-          <p className="lz-intro">
-            Vi samler det væsentlige om udbydere med licens fra Spillemyndigheden —
-            kampagner, udbetalinger og ansvarligt spil — så du kan beslutte med koldt
-            overlæg. Indhold kun for personer over 18 år.
-          </p>
-          <div className="lz-hero__cta">
-            <Link className="lz-btn lz-btn--primary" href="/vurdering">
-              Kom godt i gang
-            </Link>
-            <a className="lz-btn lz-btn--ghost" href="#guide">
-              Læs guiden
-            </a>
+        <div className="lz-wrap lz-hero__grid">
+          <div className="lz-hero__copy">
+            <span className="lz-eyebrow">Lovligt marked · Spillemyndigheden · 2026</span>
+            <h1 className="lz-h1">Onlinekasinoer i Danmark</h1>
+            <p className="lz-intro">
+              Vi samler det væsentlige om udbydere med licens fra Spillemyndigheden —
+              kampagner, udbetalinger og ansvarligt spil — så du kan beslutte med koldt
+              overlæg. Indhold kun for personer over 18 år.
+            </p>
+            <div className="lz-hero__cta">
+              <Link className="lz-btn lz-btn--primary" href="/vurdering">
+                Kom godt i gang
+              </Link>
+              <a className="lz-btn lz-btn--ghost" href="#guide">
+                Læs guiden
+              </a>
+            </div>
+            <p className="lz-hero__note">
+              Vi er et uafhængigt informationsmedie, ikke en spiludbyder.
+            </p>
           </div>
-          <p className="lz-hero__note">
-            Vi er et uafhængigt informationsmedie, ikke en spiludbyder.
-          </p>
+          <figure className="lz-hero__media" aria-hidden="true">
+            <picture>
+              <source srcSet="/images/hero-characters.webp" type="image/webp" />
+              <img
+                src="/images/hero-characters.png"
+                alt=""
+                width={900}
+                height={852}
+                loading="eager"
+                decoding="async"
+              />
+            </picture>
+          </figure>
         </div>
       </section>
 
