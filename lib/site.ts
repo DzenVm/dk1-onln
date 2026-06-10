@@ -1,7 +1,9 @@
 // Central konfiguration for sitet. Ét sted at ændre brand, URL og kontakt.
 
 export const SITE = {
-  name: "Spilnord",
+  // Sitet har intet brand/navn — kun en beskrivende titel og en juridisk udgiver.
+  title: "Guide til onlinekasino i Danmark",
+  shortName: "Kasinoguide",
   // Brug NEXT_PUBLIC_SITE_URL i produktion (Vercel), ellers et fornuftigt fallback.
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||

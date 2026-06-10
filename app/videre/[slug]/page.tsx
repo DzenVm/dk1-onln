@@ -27,7 +27,7 @@ export default async function BridgePage({ params }: Params) {
   return (
     <section className="lz-sheet lz-sheet--narrow">
       <div className="lz-wrap" style={{ textAlign: "center" }}>
-        <span className="lz-eyebrow">Du forlader {`Spilnord`}</span>
+        <span className="lz-eyebrow">Du forlader sitet</span>
         <h1 className="lz-h1">Videre til {offer.name}</h1>
         <p className="lz-intro" style={{ margin: "1rem auto 0", maxWidth: "54ch" }}>
           Du sendes nu til {offer.name}s officielle, danske site. Registrering, indbetaling

@@ -1,4 +1,4 @@
-# Spilnord — guide til onlinekasino i Danmark
+# Guide til onlinekasino i Danmark
 
 SSR-website bygget med **Next.js 16 (App Router)** og **React 19**. Dansk sprog,
 målrettet det danske marked (Spillemyndigheden), klar til **Google Ads**.

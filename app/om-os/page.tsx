@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Om os",
   description:
-    "Spilnord er et uafhængigt informationsmedie om onlinekasinoer med dansk licens. Vi er ikke en spiludbyder.",
+    "Et uafhængigt informationsmedie om onlinekasinoer med dansk licens. Vi er ikke en spiludbyder.",
   alternates: { canonical: "/om-os" },
 };
 
@@ -16,10 +16,10 @@ export default function OmOsPage() {
         <nav className="lz-crumb" aria-label="Brødkrumme">
           <Link href="/">Forside</Link> / Om os
         </nav>
-        <h1 className="lz-h1">Om {SITE.name}</h1>
+        <h1 className="lz-h1">Om os</h1>
         <div className="lz-prose">
           <p>
-            {SITE.name} er et uafhængigt informationsmedie om onlinekasinoer med licens fra
+            Dette er et uafhængigt informationsmedie om onlinekasinoer med licens fra
             Spillemyndigheden i Danmark. Vi er ikke en spiludbyder, vi tager ikke imod
             væddemål og vi behandler ikke betalinger. Al spilaktivitet sker hos den
             licenserede udbyder.
@@ -48,7 +48,7 @@ export default function OmOsPage() {
 
           <h2>Udgiver</h2>
           <p>
-            {SITE.name} udgives af {SITE.company.legalName}, {SITE.company.address}. IČO{" "}
+            Sitet udgives af {SITE.company.legalName}, {SITE.company.address}. IČO{" "}
             {SITE.company.ico}.
           </p>
           <p>

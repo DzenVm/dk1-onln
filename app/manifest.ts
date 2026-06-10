@@ -3,8 +3,8 @@ import { SITE } from "@/lib/site";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${SITE.name} — guide til onlinekasino i Danmark`,
-    short_name: SITE.name,
+    name: SITE.title,
+    short_name: SITE.shortName,
     description: SITE.description,
     start_url: "/",
     display: "standalone",

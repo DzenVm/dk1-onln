@@ -8,14 +8,11 @@ import CookieConsent from "@/components/CookieConsent";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Guide til onlinekasino i Danmark",
-    template: `%s · ${SITE.name}`,
+    default: SITE.title,
+    template: `%s · ${SITE.title}`,
   },
   description: SITE.description,
-  applicationName: SITE.name,
-  authors: [{ name: SITE.name }],
-  creator: SITE.name,
-  publisher: SITE.name,
+  publisher: SITE.company.legalName,
   keywords: SITE.keywords,
   category: "reference",
   robots: { index: true, follow: true },
@@ -25,8 +22,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: SITE.locale,
     url: SITE.url,
-    siteName: SITE.name,
-    title: "Guide til onlinekasino i Danmark",
+    siteName: SITE.title,
+    title: SITE.title,
     description:
       "Sammenlign kampagner, betalingsmetoder og regler for lovligt kasino i Danmark. 18+.",
   },
@@ -51,7 +48,7 @@ export default function RootLayout({
   const orgJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: SITE.name,
+    name: SITE.company.legalName,
     legalName: SITE.company.legalNameFull,
     url: SITE.url,
     email: SITE.email,

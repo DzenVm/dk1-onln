@@ -4,7 +4,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Kontakt",
-  description: "Kontakt Spilnords redaktion.",
+  description: "Kontakt redaktionen.",
   alternates: { canonical: "/kontakt" },
 };
 

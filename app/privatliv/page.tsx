@@ -4,7 +4,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privatlivspolitik",
-  description: "Sådan behandler Spilnord cookies og personoplysninger.",
+  description: "Sådan behandler sitet cookies og personoplysninger.",
   alternates: { canonical: "/privatliv" },
 };
 
@@ -18,7 +18,7 @@ export default function PrivatlivPage() {
         <h1 className="lz-h1">Privatlivspolitik</h1>
         <div className="lz-prose">
           <p>
-            Denne politik beskriver, hvordan {SITE.name} behandler oplysninger og bruger
+            Denne politik beskriver, hvordan vi behandler oplysninger og bruger
             cookies. Vi behandler så få oplysninger som muligt og kun med et klart formål.
           </p>
 

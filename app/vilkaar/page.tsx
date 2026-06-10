@@ -4,7 +4,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Vilkår",
-  description: "Vilkår for brug af Spilnord.",
+  description: "Vilkår for brug af sitet.",
   alternates: { canonical: "/vilkaar" },
 };
 
@@ -18,13 +18,13 @@ export default function VilkaarPage() {
         <h1 className="lz-h1">Vilkår for brug</h1>
         <div className="lz-prose">
           <p>
-            Ved at bruge {SITE.name} accepterer du nedenstående vilkår. Læs dem, før du bruger
+            Ved at bruge dette site accepterer du nedenstående vilkår. Læs dem, før du bruger
             sitet.
           </p>
 
           <h2>1. Formål og målgruppe</h2>
           <p>
-            {SITE.name} er et uafhængigt informationsmedie om onlinekasinoer med dansk licens.
+            Dette site er et uafhængigt informationsmedie om onlinekasinoer med dansk licens.
             Indholdet er udelukkende til information og henvender sig til personer på 18 år og
             derover. Vi er ikke en spiludbyder, tager ikke imod væddemål og behandler ikke
             betalinger.
@@ -55,7 +55,7 @@ export default function VilkaarPage() {
 
           <h2>5. Ansvarsbegrænsning</h2>
           <p>
-            {SITE.name} kan ikke holdes ansvarlig for tab eller skade, der opstår som følge af
+            Udgiveren kan ikke holdes ansvarlig for tab eller skade, der opstår som følge af
             brug af sitet eller af beslutninger truffet på baggrund af indholdet.
           </p>
 

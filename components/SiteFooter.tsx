@@ -80,8 +80,8 @@ export default function SiteFooter() {
 
         <div className="lz-foot__legal">
           <p>
-            © {new Date().getFullYear()} — {SITE.name}, drevet af {c.legalName}.{" "}
-            {c.address}. IČO {c.ico}. Alle rettigheder forbeholdes.
+            © {new Date().getFullYear()} — {c.legalName}, {c.address}. IČO {c.ico}.
+            Alle rettigheder forbeholdes.
           </p>
           <nav className="lz-foot__links" aria-label="Links i sidefod">
             {NAV_FOOTER.map((item) => (

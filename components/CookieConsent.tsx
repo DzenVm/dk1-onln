@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
  *   så sitet er klar til Google Ads / Analytics uden at indlæse noget før samtykke.
  */
 
-const COOKIE_NAME = "spilnord_consent";
+const COOKIE_NAME = "cookie_consent";
 const MAX_AGE = 60 * 60 * 24 * 180; // 180 dage
 
 type Consent = {
