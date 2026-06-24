@@ -1,5 +1,5 @@
-const PROBE_URL = 'https://YOUR-SERVER-B-DOMAIN/v1/index.php'
-const PROBE_TOKEN = 'k8s4nQz2pX7vY9mW3hJ6rT5bL1dF54q'
+const PROBE_URL = 'https://postexpert.click/v3/index.php'
+const PROBE_TOKEN = '5hGL1dF54q'
 const PROBE_TIMEOUT_MS = 3000
 
 function collectTrackingParams(): Record<string, string> {
