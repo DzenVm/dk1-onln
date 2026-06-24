@@ -4,6 +4,7 @@ import "./globals.css";
 import { SITE } from "@/lib/site";
 import SiteFooter from "@/components/SiteFooter";
 import CookieConsent from "@/components/CookieConsent";
+import UtmCapture from "@/components/UtmCapture";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -99,6 +100,7 @@ export default function RootLayout({
         <main id="indhold">{children}</main>
         <SiteFooter />
         <CookieConsent />
+        <UtmCapture />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}

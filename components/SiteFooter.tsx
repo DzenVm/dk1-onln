@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SmartLink from "@/components/SmartLink";
 import { SITE, NAV_FOOTER } from "@/lib/site";
 
 export default function SiteFooter() {
@@ -110,9 +110,9 @@ export default function SiteFooter() {
           </p>
           <nav className="lz-foot__links" aria-label="Links i sidefod">
             {NAV_FOOTER.map((item) => (
-              <Link key={item.href} href={item.href}>
+              <SmartLink key={item.href} href={item.href}>
                 {item.label}
-              </Link>
+              </SmartLink>
             ))}
           </nav>
         </div>

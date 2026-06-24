@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SmartLink from "@/components/SmartLink";
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
 
@@ -14,7 +14,7 @@ export default function OmOsPage() {
     <section className="lz-sheet lz-sheet--narrow">
       <div className="lz-wrap">
         <nav className="lz-crumb" aria-label="Brødkrumme">
-          <Link href="/">Forside</Link> / Om os
+          <SmartLink href="/">Forside</SmartLink> / Om os
         </nav>
         <h1 className="lz-h1">Om os</h1>
         <div className="lz-prose">
@@ -54,12 +54,12 @@ export default function OmOsPage() {
           <p>
             Spørgsmål? Skriv til os på{" "}
             <a href={`mailto:${SITE.email}`}>{SITE.email}</a> eller via{" "}
-            <Link href="/kontakt">kontaktsiden</Link>.
+            <SmartLink href="/kontakt">kontaktsiden</SmartLink>.
           </p>
 
           <p style={{ marginTop: "1.5rem" }}>
             <strong>18+.</strong> Spil med omtanke. Har du brug for hjælp, så se{" "}
-            <Link href="/ansvarligt-spil">Ansvarligt spil</Link>.
+            <SmartLink href="/ansvarligt-spil">Ansvarligt spil</SmartLink>.
           </p>
         </div>
       </div>

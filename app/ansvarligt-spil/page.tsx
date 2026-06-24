@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SmartLink from "@/components/SmartLink";
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
 
@@ -15,7 +15,7 @@ export default function AnsvarligtSpilPage() {
     <section className="lz-sheet lz-sheet--narrow">
       <div className="lz-wrap">
         <nav className="lz-crumb" aria-label="Brødkrumme">
-          <Link href="/">Forside</Link> / Ansvarligt spil
+          <SmartLink href="/">Forside</SmartLink> / Ansvarligt spil
         </nav>
         <h1 className="lz-h1">Ansvarligt spil</h1>
         <div className="lz-prose">

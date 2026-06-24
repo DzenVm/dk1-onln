@@ -16,6 +16,11 @@ samme struktur og design, oversat indhold, danske myndigheder og betalingsmetode
   Valget gemmes i en cookie i 180 dage og styrer **Google Consent Mode v2**
   (`ad_storage`, `analytics_storage`, `ad_user_data`, `ad_personalization`).
   Standard er *denied*, indtil brugeren accepterer — korrekt for Google Ads i EU.
+- **UTM / klik-id videreførsel** (`lib/utm.ts`, `components/SmartLink.tsx`):
+  trafik lander på `/` fra Google Ads; halen (utm_*, gclid, gbraid, wbraid,
+  gad_source m.fl. — streng allowlist) gemmes i sessionStorage og påføres
+  interne navigationer ved klik. Links i HTML forbliver rene (ingen cloaking,
+  ingen redirects, ingen crawlbare UTM-varianter) — sikkert ift. Google.
 - **SEO**: metadata, Open Graph, JSON-LD (Organization, FAQPage, BreadcrumbList),
   `robots.txt`, `sitemap.xml`, `manifest.webmanifest`.
 - **Ansvarligt spil / 18+** gennemgående: ROFUS, StopSpillet, Spillemyndigheden.

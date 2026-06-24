@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SmartLink from "@/components/SmartLink";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getOffer, OFFERS } from "@/lib/offers";
@@ -51,9 +51,9 @@ export default async function BridgePage({ params }: Params) {
           >
             Fortsæt til {offer.name}
           </a>
-          <Link className="lz-btn lz-btn--ghost" href="/vurdering">
+          <SmartLink className="lz-btn lz-btn--ghost" href="/vurdering">
             Tilbage til vurderingen
-          </Link>
+          </SmartLink>
         </div>
 
         <p className="lz-hero__note">{offer.terms}</p>

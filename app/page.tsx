@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SmartLink from "@/components/SmartLink";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -135,9 +135,9 @@ export default function HomePage() {
               overlæg. Indhold kun for personer over 18 år.
             </p>
             <div className="lz-hero__cta">
-              <Link className="lz-btn lz-btn--primary" href="/vurdering">
+              <SmartLink className="lz-btn lz-btn--primary" href="/vurdering">
                 Kom godt i gang
-              </Link>
+              </SmartLink>
               <a className="lz-btn lz-btn--ghost" href="#guide">
                 Læs guiden
               </a>
@@ -240,7 +240,7 @@ export default function HomePage() {
           </div>
           <div className="lz-callout">
             Udtryk som »top-kasino« skifter betydning alt efter ugens kampagne. Brug{" "}
-            <Link href="/vurdering">vores vurdering</Link> som rettesnor og bekræft værdierne
+            <SmartLink href="/vurdering">vores vurdering</SmartLink> som rettesnor og bekræft værdierne
             hos udbyderen, før du spiller.
           </div>
         </div>

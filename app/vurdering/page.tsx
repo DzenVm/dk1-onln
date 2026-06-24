@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SmartLink from "@/components/SmartLink";
 import type { Metadata } from "next";
 import { OFFERS } from "@/lib/offers";
 import { SITE } from "@/lib/site";
@@ -28,7 +28,7 @@ export default function VurderingPage() {
       />
       <div className="lz-wrap">
         <nav className="lz-crumb" aria-label="Brødkrumme">
-          <Link href="/">Forside</Link> / Vurdering
+          <SmartLink href="/">Forside</SmartLink> / Vurdering
         </nav>
         <h1 className="lz-h1">Vores vurdering af kasinoer</h1>
         <p className="lz-intro" style={{ maxWidth: "65ch" }}>
@@ -71,12 +71,12 @@ export default function VurderingPage() {
                     </tbody>
                   </table>
                   <p className="lz-terms">{o.terms}</p>
-                  <Link
+                  <SmartLink
                     className="lz-btn lz-btn--primary lz-btn--block"
                     href={`/videre/${o.slug}`}
                   >
                     Se tilbud {o.name}
-                  </Link>
+                  </SmartLink>
                 </div>
               </div>
             </article>
@@ -90,12 +90,12 @@ export default function VurderingPage() {
         </div>
 
         <p style={{ marginTop: "2rem" }}>
-          <Link
+          <SmartLink
             href="/"
             style={{ color: "var(--gold-light)", fontWeight: 600 }}
           >
             ← Tilbage til guiden
-          </Link>
+          </SmartLink>
         </p>
       </div>
     </section>

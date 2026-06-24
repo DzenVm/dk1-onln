@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SmartLink from "@/components/SmartLink";
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
 
@@ -13,7 +13,7 @@ export default function VilkaarPage() {
     <section className="lz-sheet lz-sheet--narrow">
       <div className="lz-wrap">
         <nav className="lz-crumb" aria-label="Brødkrumme">
-          <Link href="/">Forside</Link> / Vilkår
+          <SmartLink href="/">Forside</SmartLink> / Vilkår
         </nav>
         <h1 className="lz-h1">Vilkår for brug</h1>
         <div className="lz-prose">
@@ -48,7 +48,7 @@ export default function VilkaarPage() {
           <h2>4. Ansvarligt spil</h2>
           <p>
             Spil indebærer en risiko for tab og kan blive vanedannende. Spil kun for penge, du
-            har råd til at miste. Se <Link href="/ansvarligt-spil">Ansvarligt spil</Link> for
+            har råd til at miste. Se <SmartLink href="/ansvarligt-spil">Ansvarligt spil</SmartLink> for
             værktøjer og hjælpelinjer, herunder {SITE.authorities.help.label} og{" "}
             {SITE.authorities.selfExclusion.label}.
           </p>

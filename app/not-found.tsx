@@ -1,4 +1,4 @@
-import Link from "next/link";
+import SmartLink from "@/components/SmartLink";
 
 export default function NotFound() {
   return (
@@ -12,9 +12,9 @@ export default function NotFound() {
         >
           Den side, du leder efter, findes ikke eller er blevet flyttet.
         </p>
-        <Link className="lz-btn lz-btn--primary" href="/">
+        <SmartLink className="lz-btn lz-btn--primary" href="/">
           Tilbage til forsiden
-        </Link>
+        </SmartLink>
       </div>
     </section>
   );
