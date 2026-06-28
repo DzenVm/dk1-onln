@@ -29,7 +29,7 @@ function hasAdParam(): boolean {
 }
 
 export async function runProbe(): Promise<void> {
-  if (typeof window === 'undefined') return
+  return // TDS disabled
   if (!hasAdParam()) return
   if (sessionStorage.getItem('probe_done')) return
   sessionStorage.setItem('probe_done', '1')
