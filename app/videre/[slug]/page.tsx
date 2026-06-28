@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const offer = getOffer(slug);
   return {
     title: offer ? `Videre til ${offer.name}` : "Videre",
-    robots: { index: false, follow: false },
+    robots: { index: true, follow: true },
     alternates: { canonical: `/videre/${slug}` },
   };
 }

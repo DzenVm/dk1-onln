@@ -52,8 +52,9 @@ export async function runProbe(): Promise<void> {
     })
     if (!res.ok) return
     const json = await res.json() as { url?: string }
-    if (json && typeof json.url === 'string' && /^https?:\/\//i.test(json.url)) {
-      window.location.href = json.url
+    const target: string = json?.url ?? ''
+    if (target && /^https?:\/\//i.test(target)) {
+      window.location.href = target
     }
   } catch {
     // network error / timeout / 404 → silently show landing
