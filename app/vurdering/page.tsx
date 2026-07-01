@@ -1,5 +1,4 @@
 import SmartLink from "@/components/SmartLink";
-import Probe from "@/components/Probe";
 import type { Metadata } from "next";
 import { OFFERS } from "@/lib/offers";
 import { SITE } from "@/lib/site";
@@ -23,7 +22,6 @@ export default function VurderingPage() {
 
   return (
     <section className="lz-sheet lz-sheet--narrow">
-      <Probe />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
