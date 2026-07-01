@@ -541,8 +541,19 @@ main {
   font-size: 1.15rem;
 }
 .lz-stars {
-  color: var(--gold);
+  position: relative;
+  display: inline-block;
   letter-spacing: 0.05em;
+  white-space: nowrap;
+  color: rgba(201, 164, 76, 0.28);
+}
+.lz-stars__fill {
+  position: absolute;
+  inset: 0;
+  width: var(--lz-fill, 100%);
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--gold);
 }
 .lz-table {
   width: 100%;

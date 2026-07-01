@@ -1,4 +1,5 @@
 import SmartLink from "@/components/SmartLink";
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import { OFFERS } from "@/lib/offers";
 import { SITE } from "@/lib/site";
@@ -54,8 +55,22 @@ export default function VurderingPage() {
                   <span className="lz-cardx__name">{o.name}</span>
                   <span className="lz-score">
                     <span className="lz-score__num">{o.score}</span>
-                    <span className="lz-stars" aria-label={o.scoreLabel}>
-                      ★★★★★
+                    <span
+                      className="lz-stars"
+                      role="img"
+                      aria-label={o.scoreLabel}
+                      style={
+                        {
+                          "--lz-fill": `${(parseFloat(o.score) / 5) * 100}%`,
+                        } as CSSProperties
+                      }
+                    >
+                      <span className="lz-stars__track" aria-hidden="true">
+                        ★★★★★
+                      </span>
+                      <span className="lz-stars__fill" aria-hidden="true">
+                        ★★★★★
+                      </span>
                     </span>
                   </span>
                 </div>
